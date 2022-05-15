@@ -13,7 +13,10 @@ client.on("messageCreate", async (msg) => {
     return
   }
 
-  if ((Math.ceil(Math.random() * 3) <= 2)) {
+  const change = Math.ceil(Math.random() * 3);
+  console.log(`Value of '${change}' for: ${msg.content}`);
+
+  if (change <= 2) {
     return
   }
 
