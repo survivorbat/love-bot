@@ -9,9 +9,15 @@ client.on("ready", async () => {
 })
 
 client.on("messageCreate", async (msg) => {
-  if (msg.author.id !== client.user.id) {
-    await Promise.all([msg.react('❤')])
+  if (msg.author.id === client.user.id) {
+    return
   }
+
+  if ((Math.ceil(Math.random() * 3) <= 2)) {
+    return
+  }
+
+  await msg.reply('I love you <3')
 })
 
 client.login(process.env.DISCORD_TOKEN!)
