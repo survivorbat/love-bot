@@ -33,7 +33,7 @@ const swags = {
   'fuck': [swagFinger, swagSaucy],
   'friends': [swagFriends],
   'gay': [swagGay],
-  'huh': [swagHuh],
+  'huh': [swagHuh, swagConfusion],
   'war': [swagWar],
   'bitch': [swagBitch],
   'cool': [swagCool],
@@ -52,18 +52,24 @@ const swags = {
   '>:(': [swagAnger],
   ':)': [swagHappy, swagBlessed],
   ':(': [swagSad],
-  ':S': [swagConfusion],
   'B)': [swagCool],
+  'B-)': [swagCool],
 };
 
 const searchSymbols = Object.keys(swags);
 
-client.on("messageCreate", async (msg) => {
+client.on("messageCreate", (msg) => {
   // Ignore the messages from bots
   if (msg.author.bot) {
     return
   }
 
+  // If the bot is mentioned, be blessed <3
+  if (msg.mentions.users.hasAny(client.user.id)) {
+    msg.reply(swagBlessed);
+  }
+
+  // Otherwise, check if the message contains any of the strings
   const lowercaseContent = msg.content.toLowerCase();
 
   searchSymbols.forEach((symbol) => {
@@ -73,7 +79,8 @@ client.on("messageCreate", async (msg) => {
 
       const swagResult = swagEmojis[Math.floor(Math.random() * swagEmojis.length)]
 
-      return msg.react(swagResult);
+      msg.react(swagResult);
+      return
     }
   })
 })
