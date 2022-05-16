@@ -58,7 +58,11 @@ client.on("messageCreate", async (msg) => {
   searchSymbols.forEach((symbol) => {
     // React with the first finding, then return and quit.
     if (msg.content.includes(symbol)) {
-      return msg.react(symbol);
+      const swagEmojis = swags[symbol];
+
+      const swagResult = swagEmojis[Math.floor(Math.random() * swagEmojis.length)]
+
+      return msg.react(swagResult);
     }
   })
 })
