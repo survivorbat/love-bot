@@ -51,6 +51,8 @@ const swags = {
   'pls': [swagPray],
   'good': [swagBlessed],
   'sex': [swagSaucy],
+  'sorry': [swagCry],
+  'cry': [swagCry],
 };
 
 const searchSymbols = Object.keys(swags);
