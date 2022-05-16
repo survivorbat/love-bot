@@ -25,6 +25,8 @@ const swagAnger = '870580932464234496';
 const swagSad = '870581465434443796';
 const swagCry = '870578436710752327';
 const swagHappy = '876196633556185128';
+const swagPray = '938164293994692688';
+const swagSaucy = '913057483457720330';
 
 const swags = {
   ':3': [swagBlessed],
@@ -35,7 +37,7 @@ const swags = {
   ':S': [swagConfusion],
   'B)': [swagCool],
   'yes': [swagOui, swagYes],
-  'fuck': [swagFinger],
+  'fuck': [swagFinger, swagSaucy],
   'friends': [swagFriends],
   'gay': [swagGay],
   'huh': [swagHuh],
@@ -45,6 +47,10 @@ const swags = {
   'shroom': [swagShroom],
   'oh': [swagOw],
   'ow': [swagOw],
+  'please': [swagPray],
+  'pls': [swagPray],
+  'good': [swagBlessed],
+  'sex': [swagSaucy],
 };
 
 const searchSymbols = Object.keys(swags);
