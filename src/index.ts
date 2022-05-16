@@ -66,7 +66,7 @@ client.on("messageCreate", (msg) => {
 
   // If the bot is mentioned, be blessed <3
   if (msg.mentions.users.hasAny(client.user.id)) {
-    msg.reply(swagBlessed);
+    msg.reply(`<:swagblessed:${swagBlessed}>`);
   }
 
   // Otherwise, check if the message contains any of the strings
