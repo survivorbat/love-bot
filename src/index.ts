@@ -79,6 +79,7 @@ client.on("messageCreate", (msg) => {
 
       const swagResult = swagEmojis[Math.floor(Math.random() * swagEmojis.length)]
 
+      console.log(`Got a: ${swagResult}!`)
       msg.react(swagResult);
       return
     }
