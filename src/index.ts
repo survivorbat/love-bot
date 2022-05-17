@@ -98,9 +98,8 @@ client.on("messageCreate", (msg) => {
       console.log(`Got a '${symbol}' in '${msg.guild.name}'!`);
       msg.react(swagResult);
     } catch (e) {
-      console.error(`Oh noes!: ${e}`)
+      console.error(`Oh noes! ${e}`)
     }
-
   })
 })
 
