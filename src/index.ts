@@ -5,7 +5,7 @@ const client = new Client({
 });
 
 client.on("ready", async () => {
-  console.log(`Logged in as ${client.user?.tag}!`)
+  console.log(`Logged in as ${client.user?.tag}!`);
 })
 
 const swagConfusion = '945283067768078357';
@@ -62,7 +62,7 @@ const searchSymbols = Object.keys(swags);
 client.on("messageCreate", (msg) => {
   // Ignore the messages from bots
   if (msg.author.bot) {
-    return
+    return;
   }
 
   // If the bot is mentioned, be blessed <3
@@ -74,17 +74,19 @@ client.on("messageCreate", (msg) => {
   const lowercaseContent = msg.content.toLowerCase();
 
   searchSymbols.forEach((symbol) => {
-    if (lowercaseContent.includes(symbol)) {
-      const swagEmojis = swags[symbol];
-
-      const swagResult = swagEmojis[Math.floor(Math.random() * swagEmojis.length)]
-
-      console.log(`Got a '${swagResult}' in '${msg.guildId}'!`)
-      msg.react(swagResult);
+    if (!lowercaseContent.includes(symbol)) {
+      return;
     }
+
+    const swagEmojis = swags[symbol];
+
+    const swagResult = swagEmojis[Math.floor(Math.random() * swagEmojis.length)];
+
+    console.log(`Got a '${symbol}' in '${msg.guild.name}'!`);
+    msg.react(swagResult);
   })
 })
 
 
 client.login(process.env.DISCORD_TOKEN!)
-  .catch((err) => console.error(err))
+  .catch((err) => console.error(err));
