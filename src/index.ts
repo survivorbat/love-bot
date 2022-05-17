@@ -73,15 +73,13 @@ client.on("messageCreate", (msg) => {
   const lowercaseContent = msg.content.toLowerCase();
 
   searchSymbols.forEach((symbol) => {
-    // React with the first finding, then return and quit.
     if (lowercaseContent.includes(symbol)) {
       const swagEmojis = swags[symbol];
 
       const swagResult = swagEmojis[Math.floor(Math.random() * swagEmojis.length)]
 
-      console.log(`Got a: ${swagResult}!`)
+      console.log(`Got a '${swagResult}' in '${msg.guildId}'!`)
       msg.react(swagResult);
-      return
     }
   })
 })
