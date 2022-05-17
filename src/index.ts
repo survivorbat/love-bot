@@ -40,6 +40,7 @@ const swags = {
   'shroom': [swagShroom],
   'oh': [swagOw],
   'ow': [swagOw],
+  'uwu': [swagBlessed],
   'please': [swagPray],
   'pls': [swagPray],
   'good': [swagBlessed],
