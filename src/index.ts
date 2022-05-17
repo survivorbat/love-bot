@@ -13,6 +13,7 @@ const swagConfusion = '945283067768078357';
 const swagBlessed = '870578064323657778';
 const swagOui = '870581147824955423';
 const swagYes = '870578294142165012';
+const swagNo = '870578331643441192';
 const swagOw = '870580879804751923';
 const swagShroom = '882006639354462278';
 const swagHuh = '870580845948334170';
@@ -32,6 +33,7 @@ const swagSaucy = '913057483457720330';
 const swags = {
   'swag': [swagHappy],
   'yes': [swagOui, swagYes],
+  'no': [swagNo],
   'fuck': [swagFinger, swagSaucy],
   'friends': [swagFriends],
   'gay': [swagGay],
@@ -62,8 +64,8 @@ const swags = {
   '>:-(': [swagAnger],
   ':)': [swagHappy],
   ':-)': [swagHappy],
-  ':D': [swagBlessed],
-  ':-D': [swagBlessed],
+  ':D': [swagHappy],
+  ':-D': [swagHappy],
   ':(': [swagSad],
   ':-(': [swagSad],
   'B)': [swagCool],
