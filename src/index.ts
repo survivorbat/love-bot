@@ -29,6 +29,7 @@ const swagPray = '938164293994692688';
 const swagSaucy = '913057483457720330';
 
 const swags = {
+  'swag': [swagHappy],
   'yes': [swagOui, swagYes],
   'fuck': [swagFinger, swagSaucy],
   'friends': [swagFriends],
