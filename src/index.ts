@@ -94,8 +94,13 @@ client.on("messageCreate", (msg) => {
 
     const swagResult = swagEmojis[Math.floor(Math.random() * swagEmojis.length)];
 
-    console.log(`Got a '${symbol}' in '${msg.guild.name}'!`);
-    msg.react(swagResult);
+    try {
+      console.log(`Got a '${symbol}' in '${msg.guild.name}'!`);
+      msg.react(swagResult);
+    } catch (e) {
+      console.error(`Oh noes!: ${e}`)
+    }
+
   })
 })
 
