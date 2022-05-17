@@ -24,7 +24,7 @@ const swagFriends = '870581255899603015';
 const swagAnger = '870580932464234496';
 const swagSad = '870581465434443796';
 const swagCry = '870578436710752327';
-const swagHappy = '976211987652554792';
+const swagHappy = '870581016895586304';
 const swagPray = '938164293994692688';
 const swagSaucy = '913057483457720330';
 
