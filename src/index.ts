@@ -85,7 +85,7 @@ client.on("messageCreate", (msg) => {
   // Otherwise, check if the message contains any of the strings
   const lowercaseContent = msg.content.toLowerCase();
 
-  searchSymbols.forEach((symbol) => {
+  searchSymbols.forEach(async (symbol) => {
     if (!lowercaseContent.includes(symbol)) {
       return;
     }
@@ -96,7 +96,7 @@ client.on("messageCreate", (msg) => {
 
     try {
       console.log(`Got a '${symbol}' in '${msg.guild.name}'!`);
-      msg.react(swagResult);
+      await msg.react(swagResult);
     } catch (e) {
       console.error(`Oh noes! ${e}`)
     }
