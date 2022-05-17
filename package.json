@@ -6,8 +6,7 @@
   "scripts": {
     "clean": "rimraf './dist'",
     "compile": "npm run clean && tsc",
-    "start": "npm run compile && node dist/index.js",
-    "docker": "docker build . -t lovebot && docker run -e DISCORD_TOKEN=${DISCORD_TOKEN} --restart=always --name discordbot -d lovebot"
+    "start": "npm run compile && node dist/index.js"
   },
   "author": "survivorbat",
   "license": "ISC",
