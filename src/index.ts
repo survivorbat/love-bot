@@ -5,7 +5,7 @@ const client = new Client({
 });
 
 client.on("ready", async () => {
-  console.log(`Logged in as ${client.user?.tag}!`);
+  console.log(`Logged in as ${client.user?.tag} in ${client.guilds.cache.size} guilds!`);
 })
 
 const swagConfusion = '945283067768078357';
