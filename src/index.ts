@@ -24,7 +24,10 @@ client.on('messageCreate', async (msg) => {
     await msg.reply(`<:swagblessed:${swagBlessed}>`);
   }
 
-  await applySwag(msg.content.toLowerCase(), <any>msg.reply);
+  await applySwag(msg.content.toLowerCase(), async (symbol) => {
+    console.log(`Got '${symbol}' in ${msg.guild.name}`);
+    await msg.react(symbol);
+  });
 });
 
 client.login(process.env.DISCORD_TOKEN!).catch((err) => console.error(err));
