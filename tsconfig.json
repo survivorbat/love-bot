@@ -14,7 +14,7 @@
     "target": "ESNext",
     "outDir": "dist",
     "rootDir": "src/",
-    "types": ["node"]
+    "types": ["jest", "node"]
   },
   "include": ["**/*.ts"],
   "exclude": ["dist"]
