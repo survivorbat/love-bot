@@ -1,5 +1,12 @@
 import { applySwag } from './swag';
-import {swagAnger, swagBitch, swagFriends, swagHappy, swagNo, swagPray, swagSad, swagYes} from './constants';
+import {
+  swagAnger,
+  swagBitch,
+  swagFriends,
+  swagHappy,
+  swagNo,
+  swagPray,
+} from './constants';
 
 describe('applySwag', () => {
   const testData = [
