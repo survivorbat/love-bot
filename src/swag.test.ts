@@ -1,5 +1,5 @@
 import { applySwag } from './swag';
-import { swagAnger, swagHappy, swagNo } from './constants';
+import {swagAnger, swagBitch, swagFriends, swagHappy, swagNo, swagPray, swagSad, swagYes} from './constants';
 
 describe('applySwag', () => {
   const testData = [
@@ -10,6 +10,10 @@ describe('applySwag', () => {
     {
       input: 'nono',
       expectedCalls: [],
+    },
+    {
+      input: 'friends no bitch please',
+      expectedCalls: [swagFriends, swagNo, swagBitch, swagPray],
     },
     {
       input: 'no no',
@@ -50,7 +54,7 @@ describe('applySwag', () => {
       await applySwag(input, async (symbol) => <any>calls.push(symbol));
 
       // Assert
-      expect(calls).toEqual(expectedCalls);
+      expect(calls.sort()).toEqual(expectedCalls.sort());
     });
   });
 });
